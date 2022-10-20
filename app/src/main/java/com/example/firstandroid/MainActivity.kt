@@ -1,7 +1,6 @@
 package com.example.firstandroid
 
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
@@ -15,7 +14,7 @@ import androidx.room.Room
 import com.example.firstandroid.ui.theme.FirstAndroidTheme
 
 
-private lateinit var db: database
+//private lateinit var db: database
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,11 +30,13 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
-
-        db = Room.databaseBuilder(
+        /*
+        val db = Room.databaseBuilder(
             applicationContext,
-            database::class.java, "database"
+            MovieDB::class.java, "database"
         ).build()
+*/
+        /*
 
         val thread1 = Thread {
             var movie = MovieEntity(1, "spurderman", 8)
@@ -50,8 +51,10 @@ class MainActivity : ComponentActivity() {
         }
         thread1.start()
 
-
+         */
     }
+
+
 }
 
 
@@ -66,7 +69,7 @@ fun DefaultPreview() {
     FirstAndroidTheme {
         Greeting("Android")
     }
-
+    /*
     val thread = Thread {
         var movie = MovieEntity(2, "spurderman", 8)
         db.movieDAO().insertMovie(movie)
@@ -79,5 +82,5 @@ fun DefaultPreview() {
         }
     }
     thread.start()
-
+    */
 }
